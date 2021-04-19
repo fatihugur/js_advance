@@ -1,7 +1,5 @@
 var date = new Date();
-var hours = date.getHours();
-var minutes = date.getMinutes();
-var seconds = date.getSeconds();
+var hours, minutes, seconds;
 //console.log(hours+":"+minutes+":"+seconds);
 
 function changeClockFormat(unit){
@@ -12,8 +10,19 @@ function changeClockFormat(unit){
 	}
 
 }
+//control change in second
+setInterval(function(){
+	date = new Date();
+	hours = date.getHours();
+	minutes = date.getMinutes();
+	seconds = date.getSeconds();
+	//formats
+	hours = changeClockFormat(hours);
+	minutes = changeClockFormat(minutes);
+	seconds = changeClockFormat(seconds);
+	console.log(hours+":"+minutes+":"+seconds);
+	function change_time(hour, minute, second){
+		
+	}
+},1000);
 
-hours = changeClockFormat(hours);
-minutes = changeClockFormat(minutes);
-seconds = changeClockFormat(seconds);
-console.log(hours+":"+minutes+":"+seconds);
