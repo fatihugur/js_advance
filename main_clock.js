@@ -97,3 +97,5 @@ setInterval(function(){
 	//console.log(changeClockFormat(hours)+":"+changeClockFormat(minutes)+":"+changeClockFormat(seconds));
 
 }, 1000);
+
+//https://www.udemy.com/course/javascript-temelden-profesyonele-kurs-1/learn/lecture/15866028#overview
