@@ -58,7 +58,7 @@ class Calculate{
 
 
 var calculateNow = new Calculate(10,5);
-calculateNow.sum().multiplicate5();
+calculateNow.sum().multiplicate5(); //Chain method - zincir methodu
 
 // console.log("Sum: "+calculateNow.sum());
 // console.log("Extract: "+calculateNow.extraction());
@@ -72,7 +72,45 @@ calculateNow.sum().multiplicate5();
 // console.log("Divide: "+calculateLater.division());
 
 
-// 
+// https://www.udemy.com/course/javascript-temelden-profesyonele-kurs-1/learn/lecture/15876460#overview
 
+// NEW CALCULATOR
 
+//First calculator class
+
+class Calculator {
+
+	constructor(num1, num2){
+		this.num1 = num1;
+		this.num2 = num2;
+	}
+
+	sum_num (){
+		this.sum_number = this.num1 + this.num2;
+		return this;
+	}
+
+	multiplicate_five(){
+		console.log(this.sum_number * 5);
+	}
+
+}
+
+//New calculator class
+
+class anotherCalculator extends Calculator{
+	constructor(num1, num2){
+		super(num1, num2);
+
+	}
+	extract(){
+		this.sum_number= this.num1-this.num2;
+		return this;
+	}
+
+}
+
+var anyAnotherCalculator = new anotherCalculator(10,5);
+anyAnotherCalculator.sum_num().multiplicate_five();
+anyAnotherCalculator.sum_num().extract();
 
