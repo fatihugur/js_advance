@@ -1,3 +1,9 @@
+
+var divSecond, divMinute, divHour;
+divSecond = document.getElementById("second");
+divMinute = document.getElementById("minute");
+divHour = document.getElementById("hour");
+
 var date = new Date();
 var hours, minutes, seconds;
 //console.log(hours+":"+minutes+":"+seconds);
@@ -53,13 +59,41 @@ function increase_minute(minute){
 function increase_hour(hour){
 	hour += 1;
 	if(hour > 23){
-		hours = 0;
+		hour = 0;
 	} 
 	return hour;
+}
+ 
+ //for loops for H / M / S
+
+for(var counter = 0; counter < seconds; counter++){
+	divSecond.innerText += "S";
+}
+
+for(var counter1 = 0; counter1 < minutes; counter1++){
+	divMinute.innerText += "M";
+}
+for(var counter2 = 0; counter2 < hours; counter2++){
+	divHour.innerText += "H";
 }
 
 setInterval(function(){
 	seconds = increase_second(seconds);
-	console.log(changeClockFormat(hours)+":"+changeClockFormat(minutes)+":"+changeClockFormat(seconds));
+	if(seconds == 0){
+		divSecond.innerText = "";
+		divMinute.innerText += "M";
+	}
+	if(minutes == 0 && seconds == 0){
+		divMinute.innerText = "";
+		divHour.innerText += "H";
+	}
+	if(hours == 0 && minutes == 0){
+		divHour.innerText = "";
+
+	}
+	divSecond.innerText += "S";
+	console.log(seconds);
+
+	//console.log(changeClockFormat(hours)+":"+changeClockFormat(minutes)+":"+changeClockFormat(seconds));
 
 }, 1000);
