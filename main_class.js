@@ -35,3 +35,44 @@ newCat.nameCat();
 newCat.colorCat();
 
 
+// BASIC CALCULATOR
+
+class Calculate{
+	constructor(number1, number2){
+		this.number1 = number1;
+		this.number2 = number2;
+	}
+
+	sum(){
+		return this.number1 + this.number2;
+	}
+
+	extraction(){
+		return this.number1 - this.number2;
+	}
+
+	multiplication(){
+		return this.number1 * this.number2;
+	}
+
+	division(){
+		return this.number1 / this.number2;
+	}
+}
+
+
+var calculateNow = new Calculate(10,5);
+
+console.log("Sum: "+calculateNow.sum());
+console.log("Extract: "+calculateNow.extraction());
+console.log("Multiplicate: "+calculateNow.multiplication());
+console.log("Divide: "+calculateNow.division());
+console.log("Second example")
+var calculateLater = new Calculate(100,60);
+console.log("Sum: "+calculateLater.sum());
+console.log("Extract: "+calculateLater.extraction());
+console.log("Multiplicate: "+calculateLater.multiplication());
+console.log("Divide: "+calculateLater.division());
+
+
+
