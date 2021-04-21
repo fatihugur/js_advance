@@ -59,7 +59,7 @@ class RPS {
 
 var rps = new RPS();
 var whoWin;
-for(var counter =0; counter <100; counter++){
+for(var counter =0; counter < 100; counter++){
 var whoWin = rps.letsMove1().letsMove2().checkTheGame(); // set the winnar
 // console.log( "Player "+ whoWin + " win the game"); // show the winnar in console
 if(whoWin === 1){
