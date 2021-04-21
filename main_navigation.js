@@ -9,19 +9,19 @@
 
 //MOUSE ACTIONS
 
-var button = document.getElementsByTagName("button");
-button.onclick = function() { 			//ONCLICK
-	alert("Buton clicked");
-}
+var button = document.getElementsByTagName("button")[0];
+// button.onclick = function() { 			//ONCLICK
+// 	alert("Buton clicked");
+// }
 button.onfocus = function(){
-	console.log("Focused on buttun"); 	//ONFOCUS
-}
-button.mouseover = function(){       	//MOUSEOVER
-	console.log("Mouse is over");
-}
-button.mouseenter = function(){			//MOUSE ENTER
-	console.log("Mouse is enter"): 
-}
+	console.log("Focused on button"); 	//ONFOCUS
+};
+// button.mouseover = function(){       	//MOUSEOVER
+// 	console.log("Mouse is over");
+// };
+// // button.mouseenter = function(){			//MOUSE ENTER
+// 	console.log("Mouse is enter"); 
+// };
 button.ondblclick = function(){
 	console.log("Button dubble clicked");
-}
+};
