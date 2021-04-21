@@ -112,5 +112,5 @@ class anotherCalculator extends Calculator{
 
 var anyAnotherCalculator = new anotherCalculator(10,5);
 anyAnotherCalculator.sum_num().multiplicate_five();
-anyAnotherCalculator.sum_num().extract();
+// anyAnotherCalculator.sum_num().extract();
 
