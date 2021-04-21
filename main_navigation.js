@@ -7,7 +7,7 @@
 // var jr = document.getElementsByClassName("firstJr")[0];
 // console.log(jr.parentElement.children[0]);
 
-//MOUSE ACTIONS
+//MOUSE ACTIONS - EVENT LISTENERS
 
 var button = document.getElementsByTagName("button")[0];
 // button.onclick = function() { 			//ONCLICK
@@ -16,12 +16,12 @@ var button = document.getElementsByTagName("button")[0];
 button.onfocus = function(){
 	console.log("Focused on button"); 	//ONFOCUS
 };
-// button.mouseover = function(){       	//MOUSEOVER
-// 	console.log("Mouse is over");
-// };
-// // button.mouseenter = function(){			//MOUSE ENTER
-// 	console.log("Mouse is enter"); 
-// };
-button.ondblclick = function(){
+button.mouseover = function(){       	//MOUSEOVER
+	console.log("Mouse is over");
+};
+button.mouseenter = function(){			//MOUSE ENTER
+	console.log("Mouse is enter"); 
+};
+button.ondblclick = function(){				//ONDBLCLICK
 	console.log("Button dubble clicked");
 };
